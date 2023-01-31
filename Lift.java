@@ -12,16 +12,26 @@ class Lift {
     }
 
     void add(Person person) {
-        if (peopleNumber < 4) {
+        if (peopleNumber <= 4) {
+
             people[peopleNumber] = new Person(person.getId(), person.getWeight());
+
             peopleNumber++;
-        } else System.out.println("Przekroczono limit miejsc");
+            people[peopleNumber] = new Person();
+
+        } else {
+            System.out.println("Przekroczono limit miejsc");
+        }
+
     }
 
     void start(Person[] p) {
-        if (getTotalWeight(p)<maxWeight){
+        if (getTotalWeight(p) > maxWeight) {
+            System.out.println("Winda przeciazona (" + (getTotalWeight(p) - maxWeight) + "kg ponad limit)");
+
+        } else {
             System.out.println("Winda ruszyla");
-        }else System.out.println("Winda przeciazona ("+(getTotalWeight(p)-maxWeight)+"kg ponad limit)");
+        }
 
 
     }
@@ -31,6 +41,7 @@ class Lift {
     }
 
     void clear() {
-
+        peopleNumber = 0;
+        people[peopleNumber] = new Person();
     }
 }
