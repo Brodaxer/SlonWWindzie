@@ -1,7 +1,9 @@
 class Lift {
     private Person[] people = new Person[4];
     private int peopleNumber = 0;
+
     private final int maxWeight = 400;
+
 
 
     void add(Person person) {
@@ -26,12 +28,11 @@ class Lift {
         } else System.out.println("Przekroczono limit miejsc");
 
 
+
     }
 
     void start() {
-        if (peopleNumber >4 ) {
-            System.out.println("Przekroczono limit miejsc");
-        } else if (getTotalWeight() > maxWeight) {
+        if (getTotalWeight() > maxWeight) {
             System.out.println("Winda przeciazona (" + (getTotalWeight() - maxWeight) + "kg ponad limit)");
 
         } else {
@@ -51,5 +52,6 @@ class Lift {
         people[peopleNumber + 1] = new Person();
         people[peopleNumber + 2] = new Person();
         people[peopleNumber + 3] = new Person();
+        System.out.println("Winda pusta");
     }
 }

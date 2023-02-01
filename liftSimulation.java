@@ -11,8 +11,8 @@ public class liftSimulation {
         lift.add(person2);
         lift.add(person3);
         lift.add(person4);
-        lift.add(person5);
-        lift.getTotalWeight();
+//        lift.add(person5);
+//        lift.getTotalWeight();
         System.out.println(lift.getTotalWeight());
         lift.start();
 
@@ -22,6 +22,5 @@ public class liftSimulation {
         lift.getTotalWeight();
         lift.start();
         System.out.println(lift.getTotalWeight());
-        // jeszcze nie skonczylem ale na dzisiaj tak xd
     }
 }
